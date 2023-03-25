@@ -1,12 +1,97 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+<html>
+    <head>
+        <title>Cooking Companion</title>
+        <link rel="stylesheet" href="indexCSS.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">   
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto&display=swap" rel="stylesheet">
+     
+    </head>
+    <body>
+        <div class = "header">
+            <header>Cooking Companion</header>  
+        </div>
+
+        <div class = "navbar">
+            <nav>
+                <a href="index.html">
+                <img src="images/house-black-silhouette-without-door.png"; height=20 ; alt="img">
+                </a>
+                <div class = "navbarele" id = "timerlink">
+                    <a href="timer.html">Timer</a>
+                </div>
+                <!-- <a href="categories.html">Categories</a> -->
+                <div class = "navbarele">
+                <select name="" id="" onchange="window.location.href=this.value">
+                    <option value="index.html" selected>Categories</option>
+                    <option value="appetizers.html"> Appetizers </option>
+                    <option value="main_course.html"> Main Course </option>
+                    <option value="dessert.html"> Dessert </option>
+                </select>
+                </div>
+
+                <div class = "navbarele">
+                <select name="" id="" onchange="window.location.href=this.value">
+                    <option value="index.html" selected>Tags</option>
+                    <option value="chicken.html"> Chicken </option>
+                    <option value="meat.html"> Meat </option>
+                    <option value="veg.html"> Vegetarian </option>
+                </select>
+                </div>
+                
+                <div class = "navbarele">
+                <input type="text" placeholder="Search Recipes...">
+                </div>
+            </nav> 
+        </div>
+
+        
+        <div class = "recipe">
+            <div class = "recipeimg">
+                <img src="recipes/mr04.jpeg" alt="buffalowings" >
+            </div>
+
+            <div class = "recipename">
+                <a href="recipes/mr04.html">Classic Swedish Meatballs</a>
+                <!-- <h1>Buffalo Wings</h1> -->
+            </div>
+        </div>
+
+        <div class = "recipe">
+            <div class = "recipeimg">
+                <img src="recipes/mr05.jpeg" alt="buffalowings" >
+            </div>
+
+            <div class = "recipename">
+                <a href="recipes/mr05.html">Italian Roulade</a>
+                <!-- <h1>Buffalo Wings</h1> -->
+            </div>
+        </div>
+
+        <div class = "recipe">
+            <div class = "recipeimg">
+                <img src="recipes/mr06.jpeg" alt="buffalowings" >
+            </div>
+
+            <div class = "recipename">
+                <a href="recipes/mr06.html">Tabouleh</a>
+                <!-- <h1>Buffalo Wings</h1> -->
+            </div>
+        </div>
+
+        <div class = "recipe">
+            <div class = "recipeimg">
+                <img src="recipes/mr07.jpeg" alt="buffalowings" >
+            </div>
+
+            <div class = "recipename">
+                <a href="recipes/mr07.html">Chicken Tikka Masala</a>
+                <!-- <h1>Buffalo Wings</h1> -->
+            </div>
+        </div>
+
+        
+    </body>
 </html>
