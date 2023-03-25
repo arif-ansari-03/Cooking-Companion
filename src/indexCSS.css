@@ -18,10 +18,12 @@ body{
 }
 
 .navbar{
-    padding: 1em;
+    padding-bottom: 1em;
+    padding-left: 1em;
+    padding-right: 1em;
     /* margin: auto; */
-    /* background-color: #bdc3c7; */
-    color: #222222;
+    background-color: #16a085;
+    color: #ecf0f1;
 }
 
 #timerlink{
@@ -35,7 +37,7 @@ body{
     font-size: 18px;
     /* margin-right: 20%; */
     margin-left: auto;
-    color: #222222;
+    color:  #ecf0f1;
 }
 
 .navbar select{
@@ -48,7 +50,7 @@ body{
 
 .navbarele{
     margin-right: 0%;
-    /* margin-left: auto;  */
+    margin-left: 17%; 
     /* border: 2px solid #000 ; */
     display: inline;
 }
@@ -63,8 +65,10 @@ body{
 }
 
 .recipeimg img{
-    max-width: 100%;
-    max-height: 100%;
+    /* max-width: 100%;  */
+    /* max-height: 100%;  */
+    width: 100%;
+    object-fit: cover;
 }
 
 .recipename{
