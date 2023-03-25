@@ -61,19 +61,20 @@ function addKeys(keyword)
         }
     })
 }
+
 function addLink(name)
 {
     var result = document.getElementById("result");
     var a = document.createElement("a");
     var img = document.createElement("img");
-    img.setAttribute("src", name+".jpg");
+    img.setAttribute("src", name+".jpeg");
     a.setAttribute("href", name+".html");
     a.appendChild(img);
     result.appendChild(a);
     
     var a2 = document.createElement("a");
     a2.setAttribute("href", name+".html");
-    var linktext = document.createTextNode(names[name]);
+    var linktext = document.createTextNode(names[name]+"\n");
     a2.appendChild(linktext);
     result.appendChild(a2);    
 }
