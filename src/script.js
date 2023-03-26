@@ -15,7 +15,7 @@ let names =
     "mr06" : "Tabouleh",
     "mr07" : "Chicken Tikka Masala"
 };
-addKeys();
+
 // var timer = setInterval(update, 1000);
 // clearInterval(timer);
 
