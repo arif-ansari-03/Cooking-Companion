@@ -62,6 +62,17 @@ function add_Keys(keyword)
     })
 }
 
+function searchButton()
+{
+    var srch = document.getElementById("searchbar").value;
+
+    if (srch)
+    {
+        localStorage.setItem("search", srch);
+        window.location.href = "../search_result.html";
+    }
+}
+
 function addLink(name)
 {
     var result = document.getElementById("result");
