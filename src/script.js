@@ -1,7 +1,3 @@
-var time = document.getElementById("timer");
-var b = true;
-var tm;
-
 let names = 
 {
     "ar01" : "Buffalo Chicken",
@@ -16,38 +12,23 @@ let names =
     "mr07" : "Chicken Tikka Masala"
 };
 
-// var timer = setInterval(update, 1000);
-// clearInterval(timer);
+add_Keys(localStorage.getItem("search"));
 
-// //document.getElementById("result").innerHTML = <a href="">old</a>;
+function update()
+{
+    time.innerHTML = tm--;
+}
 
-// document.getElementById("b1").style.display="inline";
-// document.getElementById("b2").style.display="none";
+function searchButton()
+{
+    var srch = document.getElementById("searchbar").value;
 
-// function start(t)
-// {
-//     if (b)
-//     {
-//         tm = t;
-//         b = false;
-//     }
-
-//     timer = setInterval(update, 1000);
-
-//     document.getElementById("b1").style.display="none";
-//     document.getElementById("b2").style.display="inline";
-// }
-// function stop()
-// {
-//     clearInterval(timer);
-//     document.getElementById("b1").style.display="inline";
-//     document.getElementById("b2").style.display="none";
-// }
-
-// function update()
-// {
-//     time.innerHTML = tm--;
-// }
+    if (srch)
+    {
+        localStorage.setItem("search", srch);
+        window.location.href = "search_result.html";
+    }
+}
 
 function addKeys()
 {
@@ -56,6 +37,20 @@ function addKeys()
     keys.forEach
     ((key, index) => {
         addLink(key);
+    })
+}
+
+
+function add_Keys(keyword)
+{
+    const keys = Object.keys(names);
+
+    keys.forEach
+    ((key, index) => {
+        if ((names[key].toLowerCase()).includes(keyword.toLowerCase()))
+        {
+            addLink(key);
+        }
     })
 }
 

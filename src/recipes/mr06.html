@@ -8,6 +8,45 @@
 
 <body>
 
+    <div class = "header">
+        <header>Cooking Companion</header>  
+    </div>
+
+    <div class = "navbar">
+        <nav>
+            <a href="index.html">
+                <img src="images/house-black-silhouette-without-door.png"; height=20 ; alt="img">
+                </a>
+            <div class = "navbarele" id = "timerlink">
+                <a href="timer.html">Timer</a>
+            </div>
+            <!-- <a href="categories.html">Categories</a> -->
+            <div class = "navbarele">
+            <select name="" id="" onchange="window.location.href=this.value">
+                <option value="index.html">Categories</option>
+                <option value="appetizers.html"> Appetizers </option>
+                <option value="main_course.html"> Main Course </option>
+                <option value="dessert.html"> Dessert </option>
+            </select>
+            </div>
+
+            <div class = "navbarele">
+            <select name="" id="" onchange="window.location.href=this.value">
+                <option value="index.html">Tags</option>
+                <option value="chicken.html"> Chicken </option>
+                <option value="meat.html"> Meat </option>
+                <option value="veg.html"> Vegetarian </option>
+            </select>
+            </div>
+            
+            <div class = "navbarele">
+            <input type="text" placeholder="Search here..." id = "searchbar">
+            <button onclick="searchButton()"><img src="searchbutton.jpg" width="10" height="10"></button>
+            </div>
+
+        </nav> 
+    </div>
+
     <h1>Tabouleh</h1>
 
     <h2>Total time:<br>Prep/Cook: 30 mins </h2>

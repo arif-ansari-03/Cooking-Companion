@@ -49,7 +49,7 @@ function update()
     time.innerHTML = tm--;
 }
 
-function addKeys(keyword)
+function add_Keys(keyword)
 {
     const keys = Object.keys(names);
 
