@@ -12,12 +12,99 @@ let names =
     "mr07" : "Chicken Tikka Masala"
 };
 
-add_Keys(localStorage.getItem("search"));
+var b = true;
+var tm;
+var h, m, s;
+
+var timer = setInterval(update, 1000);
+clearInterval(timer);
+
+function start()
+{
+    
+
+    h = document.getElementById("H").value;
+    m = document.getElementById("M").value;
+    s = document.getElementById("S").value;
+    if (!h) h = "00";
+    if (!m) m = "00";
+    if (!s) s = "00";
+
+    tm = Number(h)*3600 + Number(m)*60 + Number(s);
+    if (tm > 0)
+    {
+        document.getElementById("H").disabled = true;
+        document.getElementById("M").disabled = true;
+        document.getElementById("S").disabled = true;
+        timer = setInterval(update, 1000);
+
+        document.getElementById("start").style.display="none";
+        document.getElementById("stop").style.display="inline";
+        document.getElementById("stop text").innerHTML = "";
+    }
+    if (tm <= 0)
+    {
+        document.getElementById("stop text").innerHTML = "Set Valid Time";
+    }
+}
+function stop()
+{
+    document.getElementById("H").disabled = false;
+    document.getElementById("M").disabled = false;
+    document.getElementById("S").disabled = false;
+    clearInterval(timer);
+    document.getElementById("start").style.display="inline";
+    document.getElementById("stop").style.display="none";
+}
+
+function reset()
+{
+    tm = 0;
+    h = Math.floor(tm/3600).toString();
+    if (h.length == 1) h = "0" + h;
+
+    m = Math.floor(tm/60).toString();
+    if (m.length == 1) m = "0" + m;
+
+    s = (tm%60).toString();
+    if (s.length == 1) s = "0" + s;
+
+    document.getElementById("H").value = h;
+    document.getElementById("M").value = m;
+    document.getElementById("S").value = s;
+}
+
+if (localStorage.getItem("search"))
+{
+    add_Keys(localStorage.getItem("search"));
+    localStorage.removeItem("search");
+}
 
 function update()
 {
-    time.innerHTML = tm--;
+    tm--;
+
+    var h = Math.floor(tm/3600).toString();
+    if (h.length == 1) h = "0" + h;
+
+    var m = Math.floor(tm/60).toString();
+    if (m.length == 1) m = "0" + m;
+
+    var s = (tm%60).toString();
+    if (s.length == 1) s = "0" + s;
+
+    document.getElementById("H").value = h;
+    document.getElementById("M").value = m;
+    document.getElementById("S").value = s;
+
+    if (tm == 0)
+    {
+        document.getElementById("stop text").innerHTML = "TIMER ENDED!";
+        stop();
+    }
 }
+
+
 
 function searchButton()
 {
