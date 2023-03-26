@@ -7,7 +7,7 @@ let names =
     "ar01" : "Buffalo Chicken",
     "ar02" : "Turkey Sliders with Sesame Slaw",
     "ar03" : "Tortilla Pinwheels",
-    "dr08" : "Baked Bhurro Bites",
+    "dr08" : "Baked Churro Bites",
     "dr09" : "Philadelphia Classic Cheesecake",
     "dr10" : "Rasmalai",
     "mr04" : "Classic Swedish Meatballs",
